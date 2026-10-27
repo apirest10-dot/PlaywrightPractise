@@ -1,0 +1,53 @@
+No of links are 26
+About
+https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header
+Store
+https://store.google.com/IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN
+Gmail
+https://mail.google.com/mail/&ogbl
+Images
+https://www.google.com/imghp?hl=en&ogbl
+
+https://www.google.co.in/intl/en/about/products
+Sign in
+https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e
+
+https://www.google.com/webhp?hl=en&ictx=0&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQPAgF
+हिन्दी
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCCk
+বাংলা
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCCo
+తెలుగు
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCCs
+मराठी
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCCw
+தமிழ்
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCC0
+ગુજરાતી
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCC4
+ಕನ್ನಡ
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCC8
+മലയാളം
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCDA
+ਪੰਜਾਬੀ
+https://www.google.com/setprefs?sig=0_sp-f99mUiUgVIuBLkZCibPc_6Cs%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwi3oajexLmXAxURd2wGHUSCHycQ2ZgBCDE
+Advertising
+https://www.google.com/intl/en_in/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+Business
+https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+How Search works
+https://google.com/search/howsearchworks/?fg=1
+Privacy
+https://policies.google.com/privacy?hl=en-IN&fg=1
+Terms
+https://policies.google.com/terms?hl=en-IN&fg=1
+Search settings
+https://www.google.com/preferences?hl=en-IN&fg=1
+Advanced search
+/advanced_search?hl=en-IN&fg=1
+Your data in Search
+/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com
+Search history
+/history/optout?hl=en-IN&fg=1
+Search help
+https://support.google.com/websearch/?p=ws_results_help&hl=en-IN&fg=1

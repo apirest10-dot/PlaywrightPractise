@@ -1,0 +1,873 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: countinglinks.spec.ts >> Counting links1
+- Location: tests\countinglinks.spec.ts:21:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.goto: Test timeout of 30000ms exceeded.
+Call log:
+  - navigating to "https://yahoo.com/", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link [ref=e7] [cursor=pointer]:
+          - /url: https://www.yahoo.com/
+          - img "Yahoo" [ref=e8]
+        - search [ref=e12]:
+          - generic: Search Query for Search the web
+          - generic [ref=e13]:
+            - searchbox "Search Query for Search the web" [active] [ref=e14]
+            - button "Search with Yahoo Scout" [ref=e15] [cursor=pointer]
+          - button "Search Query for Search the web" [ref=e22] [cursor=pointer]
+        - list:
+          - listitem:
+            - link "Skip to features bar" [ref=e25] [cursor=pointer]:
+              - /url: "#convenience-bar"
+          - listitem:
+            - link "Skip to left column" [ref=e26] [cursor=pointer]:
+              - /url: "#stacked-list"
+          - listitem:
+            - link "Skip to main" [ref=e27] [cursor=pointer]:
+              - /url: "#ntk"
+          - listitem:
+            - link "Skip to right column" [ref=e28] [cursor=pointer]:
+              - /url: "#right-rail"
+        - generic [ref=e30]:
+          - link "Home" [ref=e32] [cursor=pointer]:
+            - /url: https://www.yahoo.com/
+          - link "News" [ref=e34] [cursor=pointer]:
+            - /url: https://www.yahoo.com/news/
+          - link "Finance" [ref=e36] [cursor=pointer]:
+            - /url: https://finance.yahoo.com/
+          - link "Sports" [ref=e38] [cursor=pointer]:
+            - /url: https://sports.yahoo.com/
+          - button "More menu" [ref=e40] [cursor=pointer]: More
+        - generic [ref=e43]:
+          - link "Check your mail" [ref=e45] [cursor=pointer]:
+            - /url: https://mail.yahoo.com/
+            - generic [ref=e46]: Mail
+          - link "Sign in" [ref=e50] [cursor=pointer]:
+            - /url: https://login.yahoo.com/?.lang=en-US&src=frontpage&done=https%3A%2F%2Fwww.yahoo.com%2F&intl=us
+    - generic [ref=e53]:
+      - iframe [ref=e58]:
+        - generic [ref=f17e1]:
+          - generic [ref=f17e5]:
+            - generic [ref=f17e8]:
+              - link [ref=f17e9] [cursor=pointer]:
+                - /url: https://exch.quantserve.com/r?&a=p-1RYxePXT9bCS2&labels=_qc.clk,_click.adserver.rtb,_click.rand.25429744&rtbip=103.229.8.152&rtb_id=CdYIAJoJjmoVEQAQAJoJjmoVGDw6vrmYwgNjOcMYhP8&redirecturl3=https://servedby.flashtalking.com/click/7/296968;11077768;6077664;210;0/?ft_mliid=9246727&ft_mcid=9090640&gdpr=0&ft_impID=619A8ACD-514A-A2C9-52D3-673336B8FF59&ft_custom=LGMiXndlK1tiOSxYeCwvCS1gNlQsZy9BLjcjD3ZieQh-NixVEHkuXRAw6tXdQw==&g=6861D01761132B&random=646914.2744443279&ft_width=728&ft_height=90&url=https://www.adobe.com/in/creativecloud.html?sdid=DW3FZQN6&mv=display&mv2=display
+                - img "Click Here" [ref=f17e10]
+              - link [ref=f17e12] [cursor=pointer]:
+                - /url: https://www.flashtalking.com/consumer-privacy
+                - img "AdChoices arrow" [ref=f17e13]
+            - link [ref=f17e14] [cursor=pointer]:
+              - /url: "https://pixel.quantcount.com/r?a=p-9fYuixa7g_Hm2;rand=25429744;labels=_click.creative.iab,_qc.iab.clk.p-1RYxePXT9bCS2.${LINE_ITEM_ID}.11072239;redirecturl2=http://www.quantcast.com/adchoices"
+          - iframe
+          - iframe
+      - generic [ref=e60]:
+        - region "Features bar" [ref=e62]:
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - link "HoroscopeLibra Your emotional energy is perfectly well suited to today's big, crazy business—so make sure that you're front and center for the proceedings! You can roll with the punches and laugh at all the right times." [ref=e67] [cursor=pointer]:
+                - /url: https://www.yahoo.com/lifestyle/horoscope//libra/daily-20261014
+                - generic [ref=e68]:
+                  - paragraph [ref=e69]:
+                    - text: Horoscope
+                    - generic [ref=e70]: ·Libra
+                  - heading "Your emotional energy is perfectly well suited to today's big, crazy business—so make sure that you're front and center for the proceedings! You can roll with the punches and laugh at all the right times." [level=3] [ref=e71]
+              - combobox "Horoscope" [ref=e222] [cursor=pointer]:
+                - option "Capricorn"
+                - option "Aquarius"
+                - option "Pisces"
+                - option "Aries"
+                - option "Taurus"
+                - option "Gemini"
+                - option "Cancer"
+                - option "Leo"
+                - option "Virgo"
+                - option "Libra" [selected]
+                - option "Scorpio"
+                - option "Sagittarius"
+            - link "What to Watch Digger 2026dark comedy" [ref=e224] [cursor=pointer]:
+              - /url: https://search.yahoo.com/search?p=Digger&d=%7B%22type%22%3A%22yk%22%2C%22domain%22%3A%22movie%22%2C%22id%22%3A%22dd3b84f9-dfbb-479d-aedd-0fb942940ec6%22%7D&fr=fp-cbar-wtw&fr2=p%3Afp%2Cm%3Acbar-wtw
+              - generic [ref=e225]:
+                - paragraph [ref=e226]: What to Watch
+                - generic [ref=e227]:
+                  - heading "Digger" [level=3] [ref=e228]
+                  - paragraph [ref=e229]:
+                    - text: "2026"
+                    - generic [ref=e230]: ·dark comedy
+            - link [ref=e234] [cursor=pointer]:
+              - /url: https://www.yahoo.com/games/play/circuits/
+              - generic [ref=e235]:
+                - paragraph [ref=e236]: Game of the Day
+                - generic [ref=e237]:
+                  - heading "Circuits" [level=3] [ref=e238]
+                  - paragraph [ref=e239]: October 14
+            - generic [ref=e242]:
+              - link "FeaturedFinal Colorado 3 Dallas 2" [ref=e244] [cursor=pointer]:
+                - /url: https://sports.yahoo.com/nhl/colorado-avalanche-dallas-stars-2026101309/
+                - generic [ref=e245]:
+                  - paragraph [ref=e246]:
+                    - text: Featured
+                    - generic [ref=e247]: ·Final
+                  - generic [ref=e248]:
+                    - generic [ref=e249]:
+                      - heading "Colorado" [level=3] [ref=e252]
+                      - paragraph [ref=e254]: "3"
+                    - generic [ref=e255]:
+                      - heading "Dallas" [level=3] [ref=e258]
+                      - paragraph [ref=e260]: "2"
+              - combobox "Select a league" [ref=e262] [cursor=pointer]:
+                - option "Featured" [selected]
+                - option "NFL"
+                - option "NCAAF"
+                - option "NBA"
+                - option "NHL"
+                - option "NCAAB"
+                - option "NCAAW"
+                - option "Soccer"
+                - option "Premier League"
+                - option "Champions League"
+                - option "La Liga"
+                - option "MLS"
+                - option "MLB"
+                - option "WNBA"
+            - link "Major Markets S&P 500 7,805.45 Stock symbol GSPC -0.02%" [ref=e264] [cursor=pointer]:
+              - /url: https://finance.yahoo.com/quote/%5EGSPC
+              - generic [ref=e265]:
+                - paragraph [ref=e266]: Major Markets
+                - generic [ref=e267]:
+                  - generic [ref=e268]:
+                    - heading "S&P 500" [level=3] [ref=e269]
+                    - heading "7,805.45" [level=3] [ref=e271]
+                  - generic [ref=e272]:
+                    - paragraph [ref=e273]:
+                      - generic [ref=e275]:
+                        - generic [ref=e276]: Stock symbol
+                        - text: GSPC
+                    - paragraph [ref=e278]: "-0.02%"
+        - generic [ref=e279]:
+          - generic [ref=e282]:
+            - generic [ref=e284]:
+              - generic [ref=e285]: Breaking
+              - heading [level=2] [ref=e290]:
+                - link "New inflation data comes in hotter than expected in a sign that prices remain elevated as midterms near" [ref=e291] [cursor=pointer]:
+                  - /url: /finance/economy/article/high-gas-prices-pushed-cpi-inflation-to-37-in-september-123558806.html
+            - button "Get email alerts" [ref=e293] [cursor=pointer]
+          - generic [ref=e296]:
+            - region "Trending content" [ref=e297]:
+              - generic [ref=e298]:
+                - region [ref=e299]:
+                  - generic [ref=e300]:
+                    - link [ref=e301] [cursor=pointer]:
+                      - /url: https://www.yahoo.com/trending/
+                      - heading "Trending" [level=2] [ref=e307]
+                    - paragraph
+                  - list [ref=e308]:
+                    - listitem [ref=e309]:
+                      - generic [aria-hidden] [ref=e312]: "1"
+                      - link [ref=e314] [cursor=pointer]:
+                        - /url: /finance/markets/article/bank-of-america-hit-with-12-billion-penalty-over-money-laundering-failures-201623796.html
+                        - paragraph [ref=e315]: Bank of America gets $1.2B laundering penalty
+                    - listitem [ref=e316]:
+                      - generic [aria-hidden] [ref=e319]: "2"
+                      - link [ref=e321] [cursor=pointer]:
+                        - /url: /entertainment/celebrity/article/kelly-clarksons-feud-with-brooklyn-store-escalates-as-owner-says-she-put-us-in-danger-and-raises-birds-price-to-15m-101836232.html
+                        - paragraph [ref=e322]: Store owner says Kelly Clarkson put staff in danger
+                    - listitem [ref=e323]:
+                      - generic [aria-hidden] [ref=e326]: "3"
+                      - link [ref=e328] [cursor=pointer]:
+                        - /url: /entertainment/tv/article/who-was-eliminated-from-dancing-with-the-stars-last-night-6th-celebrity-sent-home-084656333.html
+                        - paragraph [ref=e329]: Another star eliminated from 'DWTS'
+                    - listitem [ref=e330]:
+                      - generic [aria-hidden] [ref=e333]: "4"
+                      - link [ref=e335] [cursor=pointer]:
+                        - /url: /news/politics/articles/katie-zacharia-responds-criticism-first-185850417.html
+                        - paragraph [ref=e336]: Katie Zacharia responds to debut criticism
+                    - listitem [ref=e337]:
+                      - generic [aria-hidden] [ref=e340]: "5"
+                      - link [ref=e342] [cursor=pointer]:
+                        - /url: /entertainment/celebrity/articles/jon-kate-star-collin-gosselin-203459449.html
+                        - paragraph [ref=e343]: Collin Gosselin alleges Kate zip-tied him
+                    - listitem [ref=e344]:
+                      - link "See more stories on Yahoo 100" [ref=e345] [cursor=pointer]:
+                        - /url: https://www.yahoo.com/trending/
+                - region [ref=e349]:
+                  - heading "Explore More" [level=2] [ref=e351]
+                  - list [ref=e352]:
+                    - listitem [ref=e353]:
+                      - link "News" [ref=e354] [cursor=pointer]:
+                        - /url: https://www.yahoo.com/news/
+                    - listitem [ref=e369]:
+                      - link "Finance" [ref=e370] [cursor=pointer]:
+                        - /url: https://finance.yahoo.com/
+                    - listitem [ref=e377]:
+                      - link "Sports" [ref=e378] [cursor=pointer]:
+                        - /url: https://sports.yahoo.com/
+                    - listitem [ref=e390]:
+                      - link "Mail" [ref=e391] [cursor=pointer]:
+                        - /url: https://mail.yahoo.com/
+                    - listitem [ref=e402]:
+                      - link "Search" [ref=e403] [cursor=pointer]:
+                        - /url: https://search.yahoo.com/
+                    - listitem [ref=e412]:
+                      - link "Weather" [ref=e413] [cursor=pointer]:
+                        - /url: https://weather.yahoo.com/
+                    - listitem [ref=e424]:
+                      - link "Games" [ref=e425] [cursor=pointer]:
+                        - /url: https://www.yahoo.com/games/
+                    - listitem [ref=e431]:
+                      - link "Shopping" [ref=e432] [cursor=pointer]:
+                        - /url: https://shopping.yahoo.com/
+                    - listitem [ref=e450]:
+                      - link "Health" [ref=e451] [cursor=pointer]:
+                        - /url: https://health.yahoo.com/
+                    - listitem [ref=e470]:
+                      - link "Creators" [ref=e471] [cursor=pointer]:
+                        - /url: https://creators.yahoo.com/
+                    - listitem [ref=e480]:
+                      - link "Entertainment" [ref=e481] [cursor=pointer]:
+                        - /url: https://www.yahoo.com/entertainment/
+                    - listitem [ref=e493]:
+                      - link "Technology" [ref=e494] [cursor=pointer]:
+                        - /url: https://tech.yahoo.com/
+                    - listitem [ref=e505]:
+                      - link "Travel" [ref=e506] [cursor=pointer]:
+                        - /url: https://travel.yahoo.com/
+                    - listitem [ref=e519]:
+                      - link "Life" [ref=e520] [cursor=pointer]:
+                        - /url: https://www.yahoo.com/lifestyle/
+                    - listitem [ref=e527]:
+                      - link "Newsletters" [ref=e528] [cursor=pointer]:
+                        - /url: https://www.yahoo.com/newsletters/
+                    - listitem [ref=e540]:
+                      - button "Tell us what you think." [ref=e541] [cursor=pointer]:
+                        - generic [ref=e542]: Feedback
+            - main "Top stories and Stories for you" [ref=e552]:
+              - generic [ref=e555]:
+                - group "Top stories" [ref=e556]:
+                  - generic [ref=e557]:
+                    - generic [ref=e558]:
+                      - status [ref=e559]:
+                        - generic [ref=e560]: "5"
+                        - generic [ref=e561]: of 15
+                      - button "Pause" [ref=e562] [cursor=pointer]
+                    - generic [ref=e565]:
+                      - button "Previous slide" [ref=e566] [cursor=pointer]
+                      - button "Next slide" [ref=e569] [cursor=pointer]
+                    - generic [ref=e573]:
+                      - group [aria-hidden] [ref=e574]:
+                        - generic [ref=e579]:
+                          - heading [level=3] [ref=e580]:
+                            - link [aria-hidden] [ref=e581] [cursor=pointer]:
+                              - /url: /news/us/articles/iran-shifting-tactics-step-attacks-000632093.html
+                              - text: Iran shifts its tactics in an attempt to influence U.S. midterms, officials say
+                          - generic [ref=e583]:
+                            - generic [ref=e584]: Reuters
+                            - generic [ref=e586]: / 1.1K
+                      - group [aria-hidden] [ref=e590]:
+                        - generic [ref=e595]:
+                          - heading [level=3] [ref=e596]:
+                            - link [aria-hidden] [ref=e597] [cursor=pointer]:
+                              - /url: /news/world/articles/worlds-oldest-shipwreck-found-off-050042994.html
+                              - text: World's oldest shipwreck found off coast of Turkey — and some of its cargo has survived
+                          - generic [ref=e599]:
+                            - generic [ref=e600]: BBC
+                            - generic [ref=e602]: / 60
+                      - group [aria-hidden] [ref=e606]:
+                        - generic [ref=e611]:
+                          - heading [level=3] [ref=e612]:
+                            - link [aria-hidden] [ref=e613] [cursor=pointer]:
+                              - /url: /news/us/article/witnesses-describe-the-moments-before-man-fell-to-his-death-from-six-flags-roller-coaster-202455385.html
+                              - text: "'The man started levitating': Witness recalls fatal Six Flags roller coaster fall in Ga."
+                          - generic [ref=e615]:
+                            - generic [ref=e616]: Yahoo News
+                            - generic [ref=e618]: / 1.2K
+                      - group [aria-hidden] [ref=e622]:
+                        - generic [ref=e627]:
+                          - heading [level=3] [ref=e628]:
+                            - link [aria-hidden] [ref=e629] [cursor=pointer]:
+                              - /url: /finance/markets/article/bank-of-america-hit-with-12-billion-penalty-over-money-laundering-failures-201623796.html
+                              - text: Bank of America fined $1.2 billion, the 3rd-largest penalty in Treasury Dept. history
+                          - generic [ref=e631]:
+                            - generic [ref=e632]: Yahoo Finance
+                            - generic [ref=e634]: / 3.7K
+                      - group "Slide 5 of 15" [ref=e638]:
+                        - generic [ref=e642]:
+                          - generic [ref=e643]:
+                            - 'link "Sponsored: learn about this recommendation (opens dialog)" [ref=e645] [cursor=pointer]':
+                              - /url: "https://popup.taboola.com/en/?template=colorbox&utm_source=yahoo-home&utm_medium=referral&utm_content=ntk-a-rocket:taboola-ntk-rocket-4:"
+                              - text: AD
+                            - heading [level=3]
+                          - generic [ref=e648] [cursor=pointer]:
+                            - link [ref=e649]:
+                              - /url: https://www.planetspark.in/parents/c/start_v204
+                              - img "Image for Taboola Advertising Unit" [ref=e651]
+                            - link [ref=e653]:
+                              - /url: https://www.planetspark.in/parents/c/start_v204
+                              - generic [ref=e655]:
+                                - link "Planet Spark in Taboola advertising section" [ref=e656]: Planet Spark
+                                - 'link "Hyderabad: Best Public Speaking Course for Children" [ref=e657]'
+                      - group [aria-hidden] [ref=e658]:
+                        - generic [ref=e663]:
+                          - heading [level=3] [ref=e664]:
+                            - link [aria-hidden] [ref=e665] [cursor=pointer]:
+                              - /url: /entertainment/celebrity/articles/art-play-raises-price-controversial-162306380.html
+                              - text: Kelly Clarkson's feud with a Brooklyn shop grows as owner lists bird for $15 million
+                          - generic [ref=e667]:
+                            - generic [ref=e668]: USA TODAY
+                            - generic [ref=e670]: / 2K
+                      - group [aria-hidden] [ref=e674]:
+                        - generic [ref=e679]:
+                          - heading [level=3] [ref=e680]:
+                            - link [aria-hidden] [ref=e681] [cursor=pointer]:
+                              - /url: /news/us/articles/texas-da-says-ice-intentionally-000216274.html
+                              - text: "'Pretty obvious': Videos show ICE officer intentionally ran over immigrant, Texas DA says"
+                          - generic [ref=e683]:
+                            - generic [ref=e684]: NBC News
+                            - generic [ref=e686]: / 2.6K
+                      - group [aria-hidden] [ref=e690]:
+                        - generic [ref=e695]:
+                          - heading [level=3] [ref=e696]:
+                            - link [aria-hidden] [ref=e697] [cursor=pointer]:
+                              - /url: /finance/technology/article/ukraine-spacex-is-throttling-starlink-again-amid-war-with-russia-111116374.html
+                              - text: Ukraine accuses SpaceX of crippling drone missions as Kyiv's ties with U.S. worsen
+                          - generic [ref=e699]:
+                            - generic [ref=e700]: Yahoo Finance
+                            - generic [ref=e702]: / 68
+                      - group [aria-hidden] [ref=e706]:
+                        - generic [ref=e711]:
+                          - heading [level=3] [ref=e712]:
+                            - link [aria-hidden] [ref=e713] [cursor=pointer]:
+                              - /url: /news/politics/articles/mamdani-city-council-strike-deal-180000686.html
+                              - text: Mamdani and city council speaker strike deal to ban NYC horse carriage industry
+                          - generic [ref=e715]:
+                            - generic [ref=e716]: Politico
+                            - generic [ref=e718]: / 2K
+                      - group [aria-hidden] [ref=e722]:
+                        - generic [ref=e726]:
+                          - link [ref=e729] [cursor=pointer]:
+                            - /url: "https://popup.taboola.com/en/?template=colorbox&utm_source=yahoo-home&utm_medium=referral&utm_content=ntk-a-rocket:taboola-ntk-rocket-9:"
+                            - text: AD
+                          - generic [ref=e732] [cursor=pointer]:
+                            - link [ref=e733]:
+                              - /url: https://in.hear.com/d/en_price_list_display
+                            - link [ref=e737]:
+                              - /url: https://in.hear.com/d/en_price_list_display
+                              - generic [ref=e739]:
+                                - link [ref=e740]: Hearing Aids
+                                - link [ref=e741]: The cost of hearing aids in Hyderabad might surprise you
+                      - group [aria-hidden] [ref=e742]:
+                        - generic [ref=e747]:
+                          - heading [level=3] [ref=e748]:
+                            - link [aria-hidden] [ref=e749] [cursor=pointer]:
+                              - /url: /health/your-body/womens-health/menopause/articles/scientists-studied-1-million-women-180555439.html
+                              - text: Menopause may change women's bodies more abruptly than previously thought
+                          - generic [ref=e751]:
+                            - generic [ref=e752]: NEWSWEEK
+                            - generic [ref=e754]: / 103
+                      - group [aria-hidden] [ref=e758]:
+                        - generic [ref=e763]:
+                          - heading [level=3] [ref=e764]:
+                            - link [aria-hidden] [ref=e765] [cursor=pointer]:
+                              - /url: /finance/energy/article/not-a-usa-deal-trump-downplays-russian-diesel-plan-in-the-face-of-gop-criticism-182030595.html
+                              - text: Trump changes his tune on Russian diesel deal as Republicans push back
+                          - generic [ref=e767]:
+                            - generic [ref=e768]: Yahoo Finance
+                            - generic [ref=e770]: / 8.2K
+                      - group [aria-hidden] [ref=e774]:
+                        - generic [ref=e779]:
+                          - heading [level=3] [ref=e780]:
+                            - link [aria-hidden] [ref=e781] [cursor=pointer]:
+                              - /url: /sports/articles/recruiting-firms-brian-flores-report-224820170.html
+                              - text: Unsealed Raiders report details NFL recruiter's assessment of Brian Flores
+                          - generic [ref=e783]:
+                            - generic [ref=e784]: USA TODAY Sports
+                            - generic [ref=e786]: / 275
+                      - group [aria-hidden] [ref=e790]:
+                        - generic [ref=e795]:
+                          - heading [level=3] [ref=e796]:
+                            - link [aria-hidden] [ref=e797] [cursor=pointer]:
+                              - /url: /entertainment/celebrity/articles/russell-brand-ruthless-calculated-voracious-093013996.html
+                              - text: Russell Brand's rape trial begins with stark allegations about his behavior
+                          - generic [ref=e799]:
+                            - generic [ref=e800]: Variety
+                            - generic [ref=e802]: / 157
+                      - group [aria-hidden] [ref=e806]:
+                        - generic [ref=e810]:
+                          - link [ref=e813] [cursor=pointer]:
+                            - /url: "https://popup.taboola.com/en/?template=colorbox&utm_source=yahoo-home&utm_medium=referral&utm_content=ntk-a-rocket:taboola-ntk-rocket-14:"
+                            - text: AD
+                          - generic [ref=e816] [cursor=pointer]:
+                            - link [ref=e817]:
+                              - /url: https://in.hear.com/d/en_horizon_founders
+                            - link [ref=e821]:
+                              - /url: https://in.hear.com/d/en_horizon_founders
+                              - generic [ref=e823]:
+                                - link [ref=e824]: Hearing Aids
+                                - link [ref=e825]: Indians over 70 are switching from hearing aids to this new device.
+                - generic [ref=e826]:
+                  - generic [ref=e829]:
+                    - heading [level=3] [ref=e830]:
+                      - link "White House officials question how long Katie Zacharia can last after 1st press briefing" [ref=e831] [cursor=pointer]:
+                        - /url: /news/politics/articles/white-house-official-calls-katie-162643985.html
+                    - generic [ref=e833]:
+                      - generic [ref=e834]: CNN
+                      - generic [ref=e837]:
+                        - text: /
+                        - img "Comments" [ref=e838]
+                        - text: "229"
+                  - generic [ref=e842]:
+                    - heading [level=3] [ref=e843]:
+                      - link "How much you need to retire comfortably with a paid-off home in every state" [ref=e844] [cursor=pointer]:
+                        - /url: /finance/markets/articles/much-retire-comfortably-paid-off-000118761.html
+                    - generic [ref=e846]:
+                      - generic [ref=e847]: Investopedia
+                      - generic [ref=e850]:
+                        - text: /
+                        - img "Comments" [ref=e851]
+                        - text: "326"
+                  - generic [ref=e855]:
+                    - heading [level=3] [ref=e856]:
+                      - link "The 'Costco effect' is changing how some Americans search for homes" [ref=e857] [cursor=pointer]:
+                        - /url: /lifestyle/articles/location-location-kirkland-costco-influencing-110128496.html
+                    - generic [ref=e859]:
+                      - generic [ref=e860]: USA TODAY
+                      - generic [ref=e863]:
+                        - text: /
+                        - img "Comments" [ref=e864]
+                        - text: "361"
+              - generic [ref=e866]:
+                - heading "For You" [level=2] [ref=e869]
+                - generic [ref=e870]:
+                  - group [ref=e871]:
+                    - generic [ref=e872]: Feed view
+                    - group [ref=e874]:
+                      - radio "Small Cards" [checked] [ref=e876] [cursor=pointer]
+                      - radio "Large Cards" [ref=e885] [cursor=pointer]
+                  - tooltip "Switch views to see more features, like following publishers. Close tooltip":
+                    - generic:
+                      - generic: Switch views to see more features, like following publishers.
+                      - button "Close tooltip"
+              - generic [ref=e892]:
+                - list [ref=e893]:
+                  - listitem [ref=e894]:
+                    - generic [ref=e896]:
+                      - generic [ref=e897]: Gaining attention
+                      - heading [level=3] [ref=e905]:
+                        - 'link "Sylvester Stallone Says He ‘Can’t Retire’ Because He Has to Pay for Daughter Sophia’s Wedding: ‘I’m Serious’" [ref=e906] [cursor=pointer]':
+                          - /url: /entertainment/celebrity/articles/sylvester-stallone-says-t-retire-192548549.html
+                      - generic [ref=e907]:
+                        - generic [ref=e908]: People
+                        - generic [ref=e910]:
+                          - link "View all comments" [ref=e911] [cursor=pointer]:
+                            - /url: /entertainment/celebrity/articles/sylvester-stallone-says-t-retire-192548549.html?bcmt=1
+                            - generic [ref=e912]: / 884
+                          - generic [ref=e915]: /3 min read
+                  - listitem [ref=e916]:
+                    - generic [ref=e928]:
+                      - generic:
+                        - figure
+                        - generic [ref=e929] [cursor=pointer]:
+                          - link "Image for Taboola Advertising Unit":
+                            - /url: https://tradewise.thefuture.university/cltah1pmp01bbpcsu5o3uytxa/long-free/bala-market-taboola
+                            - img "Image for Taboola Advertising Unit" [ref=e931]
+                          - link [ref=e933]:
+                            - /url: https://tradewise.thefuture.university/cltah1pmp01bbpcsu5o3uytxa/long-free/bala-market-taboola
+                            - generic [ref=e934]:
+                              - generic [ref=e935]:
+                                - link "TradeWise in Taboola advertising section" [ref=e936]: TradeWise
+                                - 'link "Sponsored: learn about this recommendation (opens dialog)" [ref=e938]':
+                                  - /url: "https://popup.taboola.com/en/?template=colorbox&utm_source=yahoo-home&utm_medium=referral&utm_content=stream-d-rocket-v4:taboola-stream-rocket-1:"
+                                  - generic [ref=e939]: Ad
+                              - link "Mr. Bala’s Powerful Intraday Strategy Revealed – No More Guesswork" [ref=e940]
+                  - listitem [ref=e941]:
+                    - generic [ref=e943]:
+                      - generic [ref=e944]: Gaining attention
+                      - heading [level=3] [ref=e952]:
+                        - link "Kamala Harris urges Donald Trump to \"leave the White House\" if he wants to “do things in secret” amid backlash over press ban" [ref=e953] [cursor=pointer]:
+                          - /url: /news/politics/articles/kamala-harris-urges-donald-trump-175349445.html
+                      - generic [ref=e954]:
+                        - generic [ref=e955]: Revolt
+                        - generic [ref=e957]:
+                          - link "View all comments" [ref=e958] [cursor=pointer]:
+                            - /url: /news/politics/articles/kamala-harris-urges-donald-trump-175349445.html?bcmt=1
+                            - generic [ref=e959]: / 1K
+                          - generic [ref=e962]: /3 min read
+                  - listitem [ref=e963]:
+                    - generic [ref=e965]:
+                      - generic [ref=e966]: News
+                      - heading [level=3] [ref=e968]:
+                        - link "Teen Dropped a Sandbag Onto an Ohio Highway. His Victim’s Family Just Lost Its Case Against ODOT" [ref=e969] [cursor=pointer]:
+                          - /url: /news/us/articles/teen-dropped-sandbag-onto-ohio-214544952.html
+                      - generic [ref=e970]:
+                        - generic [ref=e971]: Guessing Headlights
+                        - generic [ref=e973]:
+                          - link "View all comments" [ref=e974] [cursor=pointer]:
+                            - /url: /news/us/articles/teen-dropped-sandbag-onto-ohio-214544952.html?bcmt=1
+                            - generic [ref=e975]: / 66
+                          - generic [ref=e978]: /4 min read
+                  - listitem [ref=e979]:
+                    - generic [ref=e981]:
+                      - generic [ref=e982]: News
+                      - heading [level=3] [ref=e984]:
+                        - 'link "California woman walks into her office with 4 male coworkers behind her. Then finds out what the men behind her saw: ‘your cheeks are out’" [ref=e985] [cursor=pointer]':
+                          - /url: /lifestyle/articles/california-woman-walks-her-office-060311372.html
+                      - generic [ref=e986]:
+                        - generic [ref=e987]: The Mary Sue
+                        - generic [ref=e989]: /2 min read
+                  - listitem [ref=e991]:
+                    - generic [ref=e1004] [cursor=pointer]:
+                      - link "Image for Taboola Advertising Unit":
+                        - /url: https://tradewise.thefuture.university/cltah1pmp01bbpcsu5o3uytxa/long-free/bala-market-taboola
+                        - img "Image for Taboola Advertising Unit" [ref=e1006]
+                      - link [ref=e1008]:
+                        - /url: https://tradewise.thefuture.university/cltah1pmp01bbpcsu5o3uytxa/long-free/bala-market-taboola
+                        - generic [ref=e1009]:
+                          - generic [ref=e1010]:
+                            - link "TradeWise in Taboola advertising section" [ref=e1011]: TradeWise
+                            - 'link "Sponsored: learn about this recommendation (opens dialog)" [ref=e1013]':
+                              - /url: "https://popup.taboola.com/en/?template=colorbox&utm_source=yahoo-home&utm_medium=referral&utm_content=stream-d-rocket-v4:taboola-stream-rocket-5:"
+                              - generic [ref=e1014]: Ad
+                          - link "Book Your Daily Profit By 11 AM With This Superclass By Mr. Bala" [ref=e1015]
+                  - listitem [ref=e1016]:
+                    - generic [ref=e1022]:
+                      - heading "Spotlight Videos" [level=2] [ref=e1026]
+                      - button "Dismiss" [ref=e1027] [cursor=pointer]
+                  - listitem [ref=e1040]:
+                    - generic [ref=e1042]:
+                      - generic [ref=e1043]: NFL
+                      - heading [level=3] [ref=e1045]:
+                        - link "Bills’ Josh Allen was doing interview in Spanish when he saw Bradley Chubb get punched by Alaric Jackson" [ref=e1046] [cursor=pointer]:
+                          - /url: /sports/articles/bills-josh-allen-doing-interview-161440493.html
+                      - generic [ref=e1047]:
+                        - generic [ref=e1048]: ClutchPoints
+                        - generic [ref=e1050]: /2 min read
+                  - listitem [ref=e1052]:
+                    - generic [ref=e1054]:
+                      - generic [ref=e1055]: Gaining attention
+                      - heading [level=3] [ref=e1063]:
+                        - link "Ilhan Omar's wealth scandal takes a turn just one day after raid of her DC home" [ref=e1064] [cursor=pointer]:
+                          - /url: /news/politics/articles/ilhan-omars-wealth-scandal-takes-193820224.html
+                      - generic [ref=e1065]:
+                        - generic [ref=e1066]: Fox News
+                        - generic [ref=e1068]:
+                          - link "View all comments" [ref=e1069] [cursor=pointer]:
+                            - /url: /news/politics/articles/ilhan-omars-wealth-scandal-takes-193820224.html?bcmt=1
+                            - generic [ref=e1070]: / 1.7K
+                          - generic [ref=e1073]: /4 min read
+                  - listitem [ref=e1074]:
+                    - generic [ref=e1076]:
+                      - generic [ref=e1077]: Science
+                      - heading [level=3] [ref=e1079]:
+                        - link "In 1960, scientists predicted the world would end on November 13, 2026" [ref=e1080] [cursor=pointer]:
+                          - /url: /lifestyle/articles/1960-scientists-predicted-world-end-130200047.html
+                      - generic [ref=e1081]:
+                        - generic [ref=e1082]: Popular Science
+                        - generic [ref=e1084]:
+                          - link "View all comments" [ref=e1085] [cursor=pointer]:
+                            - /url: /lifestyle/articles/1960-scientists-predicted-world-end-130200047.html?bcmt=1
+                            - generic [ref=e1086]: / 566
+                          - generic [ref=e1089]: /11 min read
+                  - listitem [ref=e1090]
+                  - listitem [ref=e1097]:
+                    - generic [ref=e1099]:
+                      - generic [ref=e1100]: TV & movies
+                      - heading [level=3] [ref=e1102]:
+                        - link "“Frasier” Star David Hyde Pierce Says Studio Audience ‘Lost Their Minds’ When He and Jane Leeves Kissed for the First Time" [ref=e1103] [cursor=pointer]:
+                          - /url: /entertainment/tv/articles/frasier-star-david-hyde-pierce-155900158.html
+                      - generic [ref=e1104]:
+                        - generic [ref=e1105]: People
+                        - generic [ref=e1107]:
+                          - link "View all comments" [ref=e1108] [cursor=pointer]:
+                            - /url: /entertainment/tv/articles/frasier-star-david-hyde-pierce-155900158.html?bcmt=1
+                            - generic [ref=e1109]: / 417
+                          - generic [ref=e1112]: /3 min read
+                  - listitem [ref=e1113]:
+                    - generic [ref=e1115]:
+                      - generic [ref=e1116]: Autos
+                      - heading [level=3] [ref=e1118]:
+                        - link "A Nissan Armada Caught Fire Because Someone Forgot To Turn Off The Heated Seats" [ref=e1119] [cursor=pointer]:
+                          - /url: /autos/safety-and-recalls/articles/nissan-armada-caught-fire-because-113000243.html
+                      - generic [ref=e1120]:
+                        - generic [ref=e1121]: Autoblog
+                        - generic [ref=e1123]:
+                          - link "View all comments" [ref=e1124] [cursor=pointer]:
+                            - /url: /autos/safety-and-recalls/articles/nissan-armada-caught-fire-because-113000243.html?bcmt=1
+                            - generic [ref=e1125]: / 834
+                          - generic [ref=e1128]: /3 min read
+                  - listitem [ref=e1129]:
+                    - generic [ref=e1131]:
+                      - generic [ref=e1132]: World
+                      - heading [level=3] [ref=e1134]:
+                        - link "Trump admin silent as Russia hits American businesses with ‘drones and missiles’ in Ukraine" [ref=e1135] [cursor=pointer]:
+                          - /url: /news/us/articles/trump-admin-silent-russia-hits-040145850.html
+                      - generic [ref=e1136]:
+                        - generic [ref=e1137]: CNN
+                        - generic [ref=e1139]:
+                          - link "View all comments" [ref=e1140] [cursor=pointer]:
+                            - /url: /news/us/articles/trump-admin-silent-russia-hits-040145850.html?bcmt=1
+                            - generic [ref=e1141]: / 599
+                          - generic [ref=e1144]: /6 min read
+                  - listitem [ref=e1145]
+                  - listitem [ref=e1152]:
+                    - generic [ref=e1154]:
+                      - generic [ref=e1155]: Business & finance
+                      - heading [level=3] [ref=e1157]:
+                        - 'link "Jeff Bezos says people have been ‘incorrectly’ taught that success is a villain: ‘You can be a billionaire if you started a hamburger stand’" [ref=e1158] [cursor=pointer]':
+                          - /url: /news/politics/articles/jeff-bezos-says-people-incorrectly-152627496.html
+                      - generic [ref=e1159]:
+                        - generic [ref=e1160]: Fortune
+                        - generic [ref=e1162]:
+                          - link "View all comments" [ref=e1163] [cursor=pointer]:
+                            - /url: /news/politics/articles/jeff-bezos-says-people-incorrectly-152627496.html?bcmt=1
+                            - generic [ref=e1164]: / 4.6K
+                          - generic [ref=e1167]: /4 min read
+                  - listitem [ref=e1168]:
+                    - generic [ref=e1170]:
+                      - generic [ref=e1171]: Entertainment
+                      - heading [level=3] [ref=e1173]:
+                        - 'link "Amanda Seyfried turned down TV role ‘because of the sex’: ‘I would have to have sex all the time’" [ref=e1174] [cursor=pointer]':
+                          - /url: /entertainment/tv/articles/amanda-seyfried-turned-down-tv-183205152.html
+                      - generic [ref=e1175]:
+                        - generic [ref=e1176]: Entertainment Weekly
+                        - generic [ref=e1178]:
+                          - link "View all comments" [ref=e1179] [cursor=pointer]:
+                            - /url: /entertainment/tv/articles/amanda-seyfried-turned-down-tv-183205152.html?bcmt=1
+                            - generic [ref=e1180]: / 851
+                          - generic [ref=e1183]: /3 min read
+                  - listitem [ref=e1184]:
+                    - generic [ref=e1186]:
+                      - generic [ref=e1187]: News
+                      - heading [level=3] [ref=e1189]:
+                        - 'link "Woman boards United flight and looks at window panel at 30,000 feet. She panics after seeing something no passenger wants to spot: ‘Umm…is this safe?’" [ref=e1190] [cursor=pointer]':
+                          - /url: /travel/advice/safety/articles/woman-boards-united-flight-looks-141420282.html
+                      - generic [ref=e1191]:
+                        - generic [ref=e1192]: The Mary Sue
+                        - generic [ref=e1194]:
+                          - link "View all comments" [ref=e1195] [cursor=pointer]:
+                            - /url: /travel/advice/safety/articles/woman-boards-united-flight-looks-141420282.html?bcmt=1
+                            - generic [ref=e1196]: / 117
+                          - generic [ref=e1199]: /3 min read
+                  - listitem [ref=e1200]
+                  - listitem [ref=e1208]
+                  - listitem [ref=e1215]:
+                    - generic [ref=e1217]:
+                      - generic [ref=e1218]: NBA
+                      - heading [level=3] [ref=e1220]:
+                        - link "\"Sit your a-s in the house or do what Kobe did\" – Robert Horry calls out Nikola Jokic over complaints about fans" [ref=e1221] [cursor=pointer]:
+                          - /url: /sports/articles/sit-house-kobe-did-robert-091800461.html
+                      - generic [ref=e1222]:
+                        - generic [ref=e1223]: Basketball Network
+                        - generic [ref=e1225]:
+                          - link "View all comments" [ref=e1226] [cursor=pointer]:
+                            - /url: /sports/articles/sit-house-kobe-did-robert-091800461.html?bcmt=1
+                            - generic [ref=e1227]: / 78
+                          - generic [ref=e1230]: /3 min read
+                  - listitem [ref=e1231]:
+                    - generic [ref=e1233]:
+                      - generic [ref=e1234]: News
+                      - heading [level=3] [ref=e1236]:
+                        - link "Florida Woman Lets Strangers Charge Their Phone. In Return, They Steal Her Car" [ref=e1237] [cursor=pointer]:
+                          - /url: /news/articles/florida-woman-lets-strangers-charge-175621613.html
+                      - generic [ref=e1238]:
+                        - generic [ref=e1239]: Guessing Headlights
+                        - generic [ref=e1241]:
+                          - link "View all comments" [ref=e1242] [cursor=pointer]:
+                            - /url: /news/articles/florida-woman-lets-strangers-charge-175621613.html?bcmt=1
+                            - generic [ref=e1243]: / 606
+                          - generic [ref=e1246]: /2 min read
+                - list [ref=e1248]:
+                  - listitem [ref=e1249]
+                  - listitem [ref=e1256]
+                  - listitem [ref=e1263]
+            - complementary "Weather, games, newsletter sign up, and more" [ref=e1270]:
+              - generic [ref=e1271]:
+                - generic [ref=e1272]:
+                  - generic [ref=e1276]:
+                    - generic [ref=e1277]:
+                      - generic [ref=e1278]: Weather
+                      - button "Hyderabad" [ref=e1279] [cursor=pointer]
+                    - generic [ref=e1283]:
+                      - generic [ref=e1284]:
+                        - generic [ref=e1285]:
+                          - generic [ref=e1286]: RealFeel® 85°, Mostly clear
+                          - generic [ref=e1287]: Powered by AccuWeather
+                        - generic [ref=e1288]:
+                          - img "Mostly clear" [ref=e1290]
+                          - generic [ref=e1297]: 88°
+                      - link "See forecast" [ref=e1298] [cursor=pointer]:
+                        - /url: https://weather.yahoo.com/in/telangana/hyderabad/
+                  - generic [ref=e1302]:
+                    - iframe [ref=e1307]:
+                      - generic [ref=f100e1]:
+                        - generic [ref=f100e5]:
+                          - generic [ref=f100e8]:
+                            - link [ref=f100e9] [cursor=pointer]:
+                              - /url: https://exch.quantserve.com/r?&a=p-1RYxePXT9bCS2&labels=_qc.clk,_click.adserver.rtb,_click.rand.1361598380&rtbip=103.229.8.9&rtb_id=CbgIAklUjmoVEQIgAklUjmoVGDy6hwXKx9Li9BQzHsk&redirecturl3=https://servedby.flashtalking.com/click/7/296968;11103626;6106242;210;0/?ft_mliid=9248044&ft_mcid=9090638&gdpr=0&ft_impID=E688A0DA-B9C7-80BC-A983-BFBE81ED4F34&ft_custom=0bfJcNHiny_Osc5xgPmfLNHthnCA5Jxk0rebeNbsmiuG488tvKyeeLzlMn7vHA==&g=6861D01761132B&random=235281.38207512212&ft_width=300&ft_height=250&url=https://www.adobe.com/in/creativecloud.html?sdid=DW3FZQN6&mv=display&mv2=display
+                              - img "Click Here" [ref=f100e10]
+                            - link [ref=f100e12] [cursor=pointer]:
+                              - /url: https://www.flashtalking.com/consumer-privacy
+                              - img "AdChoices arrow" [ref=f100e13]
+                          - link [ref=f100e14] [cursor=pointer]:
+                            - /url: "https://pixel.quantcount.com/r?a=p-9fYuixa7g_Hm2;rand=1361598380;labels=_click.creative.iab,_qc.iab.clk.p-1RYxePXT9bCS2.${LINE_ITEM_ID}.11078918;redirecturl2=http://www.quantcast.com/adchoices"
+                        - iframe
+                        - iframe
+                    - generic [ref=e1309]:
+                      - heading [level=2] [ref=e1310]:
+                        - link "Popular Games" [ref=e1311] [cursor=pointer]:
+                          - /url: https://www.yahoo.com/games/
+                      - generic [ref=e1314]:
+                        - link "Yahoo Mini October 14•88.1K playing" [ref=e1315] [cursor=pointer]:
+                          - /url: https://www.yahoo.com/games/play/mini-crossword/
+                          - generic [ref=e1316]:
+                            - generic [aria-hidden] [ref=e1319]: Play now
+                            - generic [ref=e1320]:
+                              - paragraph [ref=e1321]: Yahoo Mini
+                              - paragraph [ref=e1322]:
+                                - generic [ref=e1323]: October 14•
+                                - text: 88.1K playing
+                        - link "SpellTower October 14•38.4K playing" [ref=e1324] [cursor=pointer]:
+                          - /url: https://www.yahoo.com/games/play/spelltower/
+                          - generic [ref=e1325]:
+                            - generic [aria-hidden] [ref=e1328]: Play now
+                            - generic [ref=e1329]:
+                              - paragraph [ref=e1330]: SpellTower
+                              - paragraph [ref=e1331]:
+                                - generic [ref=e1332]: October 14•
+                                - text: 38.4K playing
+                        - link "New game Blackjack Blitz October 14•Hit 21 in every lane!" [ref=e1333] [cursor=pointer]:
+                          - /url: https://www.yahoo.com/games/play/blackjack-blitz/
+                          - generic [ref=e1334]:
+                            - generic [aria-hidden] [ref=e1337]: Play now
+                            - generic [ref=e1338]:
+                              - generic [ref=e1339]: New game
+                              - paragraph [ref=e1341]: Blackjack Blitz
+                              - paragraph [ref=e1342]:
+                                - generic [ref=e1343]: October 14•
+                                - text: Hit 21 in every lane!
+                - generic [ref=e1344]:
+                  - generic [ref=e1345]:
+                    - iframe [ref=e1349]:
+                      - generic [ref=f18e1]:
+                        - link [ref=f18e2] [cursor=pointer]:
+                          - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjsvKVWCiDHZVBL0uo4R1mXxnTv3L_6GdYD1PSYByAMIUhQKRDSSu2t9F3hIMR3snzkWyZI9bLGwIqDp97AjYOIHEJif8twnF26QIDYf0D83WHWtIxNYVsMs4_Ev1QTooCHtUiXd5a1U7O0-TcdAC4CtRW_DVcq-eQPN9e_RhuJDsSb2eoSuXLISnIZD0vl2fvzGD2aTP4JheoVy8qERas89rraPb7nhUlg8Fa7_yug4eIbBySjmWbbEJJP9hbHkQIDT5_AMk-i5Y25n1Az2Wgufs_SZtBZU-MwOU1IRjbPKkLcfn1pTJjszrSO9QdghtwjqpEWl1aNYNuSYBP9A_mUxlY7FVPu_lUmNn6bDMudeCMyOj1CLIyvDMzh0E3fyUmv5J11es2ClFUBjm7x8H_V2bTe3VH21o8sJ0h1Y5qox356zPPFlx2XwdkA9mEgjqgjz6vNt7_K7u4Nrah4nZDuw&sai=AMfl-YQA0Nk-XgSzWhpYXfHalTA5h98qHNYtZhvZNypFKm_cc7Ww6Jx0tPtASeR6HIJgZNSBCz2FKHDaOTxpV5JwyNnuJFZcnFrLs_PE0x1Ao4kXDJMxsV9vdeBTy1IqOCeTGgOGP2vNtpJzdBF8XCE4ifKBik4I05MzNfXBGpeTxN3jmeeFj-XCqKzq5rFe62vJQyIXYxFak0XFLOOeLTybsbpGjQ79qNUNHk51DWiGg4P6WyI9S-NzIqpV1v65cvd951L5M57lAB277Dxt6fIY1uJsouiRuiS_v83_8nP2GtgfHNKnyKIDLVYExV22ugPYEEGLIWyhyKuEY3a_hSvby8tIoefrbMs-M7N7zSV0cZX-KQpmE_V3lVg&sig=Cg0ArKJSzB0u93Zg2vsJ&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://yfinance.onelink.me/3068494570%3Fpid%3Dfiller%26c%3DUS_Acquisition_YMktg_337__YahooFinanceAppInstall2025INTL_XYF%26af_sub1%3DAcquisition%26af_sub2%3DUS_YMktg%26af_sub3%3D%26af_sub4%3D100002540%26af_sub5%3DAlertsV2NoButton__Static_300x250%26af_c_id%3D337
+                        - generic [ref=f18e3] [cursor=pointer]
+                        - button [ref=f18e8] [cursor=pointer]
+                    - iframe [ref=e1353]:
+                      - generic [ref=f19e1]:
+                        - link [ref=f19e2] [cursor=pointer]:
+                          - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjstMUYHywiyi2ke3QykxIAee5N69dnP5WVPcCZ2Amchkzp5sYXKHSTB4yPd5SNvlLLLyBfbdY7wPIQaDe3-CYN-bG3QUdCjWpE3LTiN5Y0LCIHSdynj_yw8F8ZaKqYybUNB7ue4pDyLLPx_xECGIosBJQBvFwOO1H6Ss7rhBBQb7-t-dIg-KewN8k32oLoK7zyfw_ox34CdwBf65SMmiVoB96S_CzBCTe2-yGe1Y9uVn5Qf2q9kK8um861plaQpCexse5aRKfujF7tJVcvF6cC4KCwpPZHkXgv7rabYROZF7HGb50rVYRdBqI6hvLfPt5HBZ45PbJvMIuF3q6quAGh9-ZHT6pS7VNcmoPA-metRu0bMp6P9Hy5lWm6E_nO4Eut8hHzfy7sctB6GnZOArvlK4owluyRdS-AUnyjTSqTp8zGdfOomzTMGtjKMg8-JtFLHxirMPQFOwk8G8d-Jxg94&sai=AMfl-YRfh1NfEbyGcxFgC9gRrliV8UkVWET5rPFUpQcZ7LoA9gIe9To9Be1S0H580YKth1P1ijRTNbQUu2jh-7vExoCU6J7YHgwCm_UHUURxyf3_p9z6y22eYXsgkYs-92isH_gNxa4UUzzL4nt3a-1ruyUu2ASYfJQdGXs1rCj8zshn_EJGZXfu9T_Tu9BQyTNOmee0l-ujsezSEeLQZyQJIFgTdSqmHYpd_Uc8HTcV9zeE0foRqM1iyUKbRLQVpR7uXQajP97AQrmoobEgOgwuU7024njoGZZwlJyI4mPhliAeuy7c0lD96myLHY1zfxbyRy0KBk8P2UuNWj9ZTaXjTFSGYrvDZ8uWv9rIAi3YS4YNo6YL1k3zxik&sig=Cg0ArKJSzFbbWrBIpTM1&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://yfinance.onelink.me/3068494570%3Fpid%3Dfiller%26c%3DUS_Acquisition_YMktg_337__YahooFinanceAppInstall2025INTL_XYF%26af_sub1%3DAcquisition%26af_sub2%3DUS_YMktg%26af_sub3%3D%26af_sub4%3D100002541%26af_sub5%3DStayAheadV1CTAButton__Static_300x250%26af_c_id%3D337
+                        - generic [ref=f19e3] [cursor=pointer]
+                        - button [ref=f19e8] [cursor=pointer]
+                  - generic [ref=e1354]:
+                    - list [ref=e1357]:
+                      - listitem [ref=e1358]:
+                        - link "Twitter" [ref=e1359] [cursor=pointer]:
+                          - /url: https://x.com/yahoonews
+                      - listitem [ref=e1362]:
+                        - link "Facebook" [ref=e1363] [cursor=pointer]:
+                          - /url: https://facebook.com/YahooNews
+                      - listitem [ref=e1366]:
+                        - link "Instagram" [ref=e1367] [cursor=pointer]:
+                          - /url: https://instagram.com/yahoonews
+                      - listitem [ref=e1370]:
+                        - link "YouTube" [ref=e1371] [cursor=pointer]:
+                          - /url: https://www.youtube.com/c/yahoonews
+                      - listitem [ref=e1374]:
+                        - link "TikTok" [ref=e1375] [cursor=pointer]:
+                          - /url: https://www.tiktok.com/@yahoonews
+                    - list [ref=e1378]:
+                      - listitem [ref=e1379]:
+                        - link "Terms" [ref=e1380] [cursor=pointer]:
+                          - /url: https://guce.yahoo.com/terms?locale=en-US
+                        - text: and
+                        - link "Privacy Policy" [ref=e1381] [cursor=pointer]:
+                          - /url: https://guce.yahoo.com/privacy-policy?locale=en-US
+                      - listitem [ref=e1382]:
+                        - link "Privacy Dashboard" [ref=e1383] [cursor=pointer]:
+                          - /url: https://guce.yahoo.com/privacy-dashboard?locale=en-US
+                      - listitem [ref=e1384]:
+                        - link "Advertise" [ref=e1385] [cursor=pointer]:
+                          - /url: https://www.yahooinc.com/
+                      - listitem [ref=e1386]:
+                        - link "About Our Ads" [ref=e1387] [cursor=pointer]:
+                          - /url: https://legal.yahoo.com/us/en/yahoo/privacy/adinfo/index.html
+                      - listitem [ref=e1388]:
+                        - link "Careers" [ref=e1389] [cursor=pointer]:
+                          - /url: https://www.yahooinc.com/careers/
+                      - listitem [ref=e1390]:
+                        - link "Help" [ref=e1391] [cursor=pointer]:
+                          - /url: https://help.yahoo.com/kb/account
+                      - listitem [ref=e1392]:
+                        - link "Feedback" [ref=e1393] [cursor=pointer]:
+                          - /url: https://yahoo.uservoice.com/forums/341361-yahoo-home
+                      - listitem [ref=e1394]:
+                        - link "Products and Services" [ref=e1395] [cursor=pointer]:
+                          - /url: https://www.yahoo.com/all/
+                    - generic [ref=e1396]: © 2026 Yahoo. All rights reserved.
+  - alert [ref=e1397]
+```
+
+# Test source
+
+```ts
+  1  | import test from "@playwright/test";
+  2  | import { link } from "node:fs";
+  3  | 
+  4  | test('Counting Links',async({page})=>{
+  5  |     await page.goto('https://google.com')
+  6  |     await page.waitForTimeout(2000)
+  7  |     //get collection of links which are stored into html tag <a>
+  8  |     const alllinks = page.locator('a')
+  9  |     const linkCount = await alllinks.count()
+  10 |     console.log(`No of links are ${linkCount}`)
+  11 |     //iterate all links
+  12 |     for(let i=0;i<linkCount;i++)
+  13 |     {
+  14 |         const linktext = await alllinks.nth(i).innerText()
+  15 |         const linkUrl = await alllinks.nth(i).getAttribute('href')
+  16 |         console.log(linktext)
+  17 |         console.log(linkUrl)
+  18 | 
+  19 |     }
+  20 | })
+  21 | test('Counting links1',async({page})=>{
+> 22 |      await page.goto('https://yahoo.com')
+     |                 ^ Error: page.goto: Test timeout of 30000ms exceeded.
+  23 |     await page.waitForTimeout(2000)
+  24 |     //get collection of links which are stored into html tag <a>
+  25 |     const alllinks = page.locator('a')
+  26 |     const linkcount = await alllinks.allInnerTexts()
+  27 |     console.log(`No of links are ${linkcount.length}`)
+  28 |     // for(const element of linkcount)
+  29 |     // {
+  30 |     //     console.log(element)
+  31 |     // }
+  32 |     for(const key in linkcount)
+  33 |     {
+  34 |         console.log(`Link Index No ${key}:: ${linkcount[key]}`)
+  35 |     }
+  36 | 
+  37 | })
+  38 | 
+```
